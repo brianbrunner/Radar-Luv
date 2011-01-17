@@ -1,2 +1,0 @@
-/Users/bbrunner/Documents/RadarLove/Classes/RadarLoveAppDelegate.m: In function '-[RadarLoveAppDelegate application:didFinishLaunchingWithOptions:]':
-/Users/bbrunner/Documents/RadarLove/Classes/RadarLoveAppDelegate.m:25: error: request for member 'locationManger' in something not a structure or union
