@@ -180,9 +180,6 @@
 					<object class="IBObjectRecord">
 						<int key="objectID">10</int>
 						<reference key="object" ref="635337675"/>
-						<object class="NSMutableArray" key="children">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-						</object>
 						<reference key="parent" ref="306444709"/>
 					</object>
 				</object>
@@ -211,10 +208,10 @@
 					<string>UIButton</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
-						<bytes key="NSTransformStruct">P4AAAL+AAAAAAAAAxABAAA</bytes>
+						<bytes key="NSTransformStruct">AUKSAABDDAAAA</bytes>
 					</object>
 					<string>UIButton</string>
-					<string>{{666, 172}, {320, 480}}</string>
+					<string>{{666, 171}, {320, 480}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
 						<bytes key="NSTransformStruct">P4AAAL+AAAAAAAAAw+UAAA</bytes>
@@ -222,7 +219,7 @@
 					<string>UIButton</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
-						<bytes key="NSTransformStruct">P4AAAL+AAABBAAAAw9iAAA</bytes>
+						<bytes key="NSTransformStruct">P4AAAL+AAAAAAAAAw6qAAA</bytes>
 					</object>
 				</object>
 			</object>
@@ -242,7 +239,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">22</int>
+			<int key="maxID">52</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">

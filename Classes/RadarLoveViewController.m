@@ -12,7 +12,9 @@
 @implementation RadarLoveViewController
 
 @synthesize topView;
+@synthesize flashing;
 @synthesize flashView;
+@synthesize flashTimer;
 @synthesize username;
 @synthesize locationManager;
 @synthesize lat1;
@@ -21,60 +23,62 @@
 @synthesize lon2;
 
 
-+ (NSNumber *)degreesToRads:(NSNumber *)number
++ (float) degreesToRads:(float)number
 {
-	return [NSNumber numberWithFloat:[number floatValue]*M_PI/180];
+	return number*M_PI/180;
 }
 
 - (void)bearingAndDistance
 {
-	NSLog(@"test");
-	NSLog(@"Test: %@", lat2);
-	NSLog(@"test");
 	if (lat1 && lon1 && lat2 && lon2) {
+		float dLat = [RadarLoveViewController degreesToRads:([lat2 floatValue]-[lat1 floatValue])];
+		float dLon = [RadarLoveViewController degreesToRads:fabs([lon2 floatValue]-[lon1 floatValue])];
+		float rlat1 = [RadarLoveViewController degreesToRads:[lat1 floatValue]];
+		float rlat2 = [RadarLoveViewController degreesToRads:[lat2 floatValue]];
+		NSLog(@"%g %g %g %g", dLat, dLon, rlat1, rlat2);
 		
-		double pi = [[NSNumber numberWithFloat:M_PI] doubleValue];
-		
-		NSNumber *dLat = [RadarLoveViewController degreesToRads:[NSNumber numberWithFloat:([lat2 floatValue]-[lat1 floatValue])]];
-		NSNumber *dLon = [RadarLoveViewController degreesToRads:[NSNumber numberWithFloat:fabs([lat2 floatValue]-[lat1 floatValue])]];
-		NSLog(@"%@ - %@ | %@ - %@", lat1, lon1, lat2, lon2);
-		NSNumber *rlat1 = [RadarLoveViewController degreesToRads:lat1];
-		NSNumber *rlat2 = [RadarLoveViewController degreesToRads:lat2];
-		
-		double dPhi = log(tan([rlat2 doubleValue]/2+pi/4)/tan([rlat1 doubleValue]/2+pi/4));
-		double q = (dPhi != 0) ? [dLat floatValue]/dPhi : cos([rlat1 doubleValue]);
+		float dPhi = logf(tanf(rlat2/2+M_PI/4)/tanf(rlat1/2+M_PI/4));
+		float q = (!isnan(dPhi)) ? dLat/dPhi : cosf(rlat1);
 		
 		// if dLon over 180° take shorter rhumb across 180° meridian:
-		if (abs([dLon doubleValue]) > M_PI) {
-			dLon = [NSNumber numberWithDouble:([dLon doubleValue]>0 ? -(2*pi-[dLon doubleValue]) : (2*pi+[dLon doubleValue]))];
+		if (fabs(dLon) > M_PI) {
+			dLon = dLon>0 ? -(2*M_PI-dLon) : (2*M_PI+dLon);
 		}
-		double d = sqrt([dLat doubleValue]*[dLat doubleValue] + q*q*[dLon doubleValue]*[dLon doubleValue]) * 6731;
-		bearing = atan2([dLon doubleValue], dPhi)*180/[[NSNumber numberWithFloat:M_PI] doubleValue];
-		NSLog(@"DIST: %g | BEARING: %g", d, bearing);
-		
+		distance = sqrtf(dLat*dLat + q*q*dLon*dLon) * 6731;
+		bearing = atan2f(dLon, dPhi)*180/M_PI;
+		NSLog(@"%@ %@ | %@ %@ \n %g km | %g dg", lat1, lon1, lat2, lon2, distance, bearing);
 	}
 }
 
 - (void) flash
 {
 	if (!flashing) {
+		AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
 		flashing = YES;
 		flashView.backgroundColor = [UIColor whiteColor];
 		if (!flashTimer) {
 			[flashTimer invalidate];
 		}
-		flashTimer = [NSTimer timerWithTimeInterval:.03 target:self selector:@selector(flashUp) userInfo:nil repeats:YES];
+		self.flashTimer = [NSTimer timerWithTimeInterval:.03 target:self selector:@selector(flashUp) userInfo:nil repeats:YES];
 		flashView.alpha = 0;
 		[[NSRunLoop currentRunLoop] addTimer:flashTimer forMode:NSDefaultRunLoopMode];
 	}
 }
 
+- (void)beat
+{
+	double delay = ((distance/10)*60+.25);
+	if (distance < .01) delay = 0.25;
+	self.flashTimer = [NSTimer timerWithTimeInterval:delay target:self selector:@selector(flash) userInfo:nil repeats:NO];
+	[[NSRunLoop currentRunLoop] addTimer:flashTimer forMode:NSDefaultRunLoopMode];
+}
+
 - (void) flashUp {
-	if (flashView.alpha < 1) {
+	if (flashView.alpha < .72) {
 		flashView.alpha += .12;
 	} else {
 		[flashTimer invalidate];
-		flashTimer = [NSTimer timerWithTimeInterval:.03 target:self selector:@selector(flashDown) userInfo:nil repeats:YES];
+		self.flashTimer = [NSTimer timerWithTimeInterval:.03 target:self selector:@selector(flashDown) userInfo:nil repeats:YES];
 		flashView.alpha = 1;
 		[[NSRunLoop currentRunLoop] addTimer:flashTimer forMode:NSDefaultRunLoopMode];
 	}
@@ -87,6 +91,7 @@
 		[flashTimer invalidate];
 		flashView.alpha = 0;
 		flashing = NO;
+		[self beat];
 	}
 }
 
@@ -95,7 +100,7 @@
 	if (!requestedTweets) {
 		requestedTweets = YES;
 		waitingForTweets = YES;
-		NSURL *url = [NSURL URLWithString:[NSString stringWithFormat: @"http://search.twitter.com/search.json?q=%%40%@+%%23radarluv&geocode=%g%%2C%g%%2C5mi", username, newLocation.coordinate.latitude, newLocation.coordinate.longitude]];
+		NSURL *url = [NSURL URLWithString:[NSString stringWithFormat: @"http://search.twitter.com/search.json?q=%%40%@+%%23radarluv&geocode=%g%%2C%g%%2C10km", username, newLocation.coordinate.latitude, newLocation.coordinate.longitude]];
 		NSURLRequest *request = [NSURLRequest requestWithURL:url];
 		NSError *error;
 		NSURLResponse *response;
@@ -115,7 +120,6 @@
 			self.lat2 = [coordinates objectAtIndex:0];
 			self.lon2 = [coordinates objectAtIndex:1];
 			[locationManager startUpdatingHeading];
-			AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
 			[self flash];
 		}
 		waitingForTweets = NO;
@@ -129,6 +133,12 @@
 - (IBAction) tap
 {
 	if (!waitingForTweets) {
+		if (flashTimer) {
+			if ([flashTimer isValid]) {
+				[flashTimer invalidate];
+				flashing = NO;
+			}
+		}
 		waitingForTweets = YES;
 		requestedTweets = NO;
 		topView.backgroundColor = [UIColor redColor];
@@ -144,7 +154,11 @@
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateHeading:(CLHeading *)newHeading
 {
-	NSLog(@"%g | %g", newHeading.trueHeading, bearing);
+	double currentBearing = newHeading.trueHeading;
+	double difference = abs(currentBearing-bearing);
+	if (difference > 180) difference = 180 - (difference - 180);
+	topView.alpha = 1 - (difference - 5)/180;
+	NSLog(@"%g %g", currentBearing, difference);
 }
 
 - (BOOL)locationManagerShouldDisplayHeadingCalibration:(CLLocationManager *)manager
@@ -164,14 +178,6 @@
     [super viewWillAppear:animated];
 }
 
-
-/*
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-*/
 
 - (void)didReceiveMemoryWarning {
 	// Releases the view if it doesn't have a superview.

@@ -24,21 +24,26 @@
 	NSNumber *lon1;
 	NSNumber *lon2;
 	BOOL flashing;
-	double bearing;
+	float bearing;
+	float distance;
 }
 
 @property (assign, nonatomic) UIView *topView;
 @property (assign, nonatomic) UIView *flashView;
+@property (retain) NSTimer *flashTimer;
 @property (retain) NSString *username;
 @property (retain) CLLocationManager *locationManager;
 @property (retain) NSNumber *lat1;
 @property (retain) NSNumber *lon1;
 @property (retain) NSNumber *lat2;
 @property (retain) NSNumber *lon2;
+@property BOOL flashing;
 
-+ (NSNumber *)degreesToRads:(NSNumber *)number;
+
++ (float)degreesToRads:(float)number;
 - (IBAction) tap;
 - (void) flash;
+- (void) beat;
 
 @end
 
