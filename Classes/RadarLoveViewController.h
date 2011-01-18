@@ -19,13 +19,24 @@
 	NSString *username;
 	NSTimer *flashTimer;
 	CLLocationManager *locationManager;
+	NSNumber *lat1;
+	NSNumber *lat2;
+	NSNumber *lon1;
+	NSNumber *lon2;
+	BOOL flashing;
+	double bearing;
 }
 
 @property (assign, nonatomic) UIView *topView;
 @property (assign, nonatomic) UIView *flashView;
 @property (retain) NSString *username;
 @property (retain) CLLocationManager *locationManager;
+@property (retain) NSNumber *lat1;
+@property (retain) NSNumber *lon1;
+@property (retain) NSNumber *lat2;
+@property (retain) NSNumber *lon2;
 
++ (NSNumber *)degreesToRads:(NSNumber *)number;
 - (IBAction) tap;
 - (void) flash;
 

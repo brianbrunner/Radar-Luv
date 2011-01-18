@@ -22,7 +22,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
 	
 	NSLog(@"%@", [[NSUserDefaults standardUserDefaults] stringForKey:@"twitterUserName"]);
-	viewController.username = @"brasdfianner";
+	viewController.username = @"brianner";
     viewController.view.backgroundColor = [UIColor blueColor];
 	self.locationManager = [[CLLocationManager alloc] init];
 	viewController.locationManager = locationManager;

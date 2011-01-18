@@ -229,6 +229,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -272,9 +274,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>4</integer>
-									<integer>2</integer>
-									<integer>0</integer>
+									<integer>22</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
@@ -308,14 +308,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>RadarLoveAppDelegate.m</string>
+								<string>RadarLoveViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -323,19 +321,19 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>RadarLoveAppDelegate.m</string>
+										<string>RadarLoveViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>2CCAB76312E3C7D200F1008B</string>
+										<string>2CCAB80B12E532C000F1008B</string>
 										<key>history</key>
 										<array>
-											<string>2CCAB5E012E3AB8E00F1008B</string>
 											<string>2CCAB71812E3BCB400F1008B</string>
-											<string>2CCAB73F12E3C35D00F1008B</string>
-											<string>2CCAB75E12E3C7BF00F1008B</string>
-											<string>2CCAB76112E3C7D200F1008B</string>
-											<string>2CCAB76212E3C7D200F1008B</string>
+											<string>2CCAB76912E3EC0B00F1008B</string>
+											<string>2CCAB7A512E525DE00F1008B</string>
+											<string>2CCAB7C212E529B500F1008B</string>
+											<string>2CCAB80912E532C000F1008B</string>
+											<string>2CCAB80A12E532C000F1008B</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -533,7 +531,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>2CCAB75C12E3C6C800F1008B</string>
+		<string>2CCAB80C12E532C000F1008B</string>
 		<string>2CCAB64412E3AEB300F1008B</string>
 		<string>2CCAB64512E3AEB300F1008B</string>
 		<string>1C78EAAD065D492600B07095</string>
