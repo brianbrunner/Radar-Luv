@@ -125,8 +125,8 @@
 		}
 		waitingForTweets = NO;
 	} else if (!waitingForTweets) {
-		self.lat1 = [NSNumber numberWithDouble:37.4243880694060]; //manager.location.coordinate.latitude]; 
-		self.lon1 = [NSNumber numberWithDouble:-122.1694060];//manager.location.coordinate.longitude];
+		self.lat1 = [NSNumber numberWithDouble:manager.location.coordinate.latitude]; 
+		self.lon1 = [NSNumber numberWithDouble:manager.location.coordinate.longitude];
 		[self bearingAndDistance];
 	}
 }
