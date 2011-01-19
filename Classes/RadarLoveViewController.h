@@ -40,7 +40,7 @@
 @property BOOL flashing;
 
 
-+ (float)degreesToRads:(float)number;
++ (double)degreesToRads:(double)number;
 - (IBAction) tap;
 - (void) flash;
 - (void) beat;

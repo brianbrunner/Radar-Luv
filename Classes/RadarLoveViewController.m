@@ -23,7 +23,7 @@
 @synthesize lon2;
 
 
-+ (float) degreesToRads:(float)number
++ (double) degreesToRads:(double)number
 {
 	return number*M_PI/180;
 }
@@ -31,21 +31,21 @@
 - (void)bearingAndDistance
 {
 	if (lat1 && lon1 && lat2 && lon2) {
-		float dLat = [RadarLoveViewController degreesToRads:([lat2 floatValue]-[lat1 floatValue])];
-		float dLon = [RadarLoveViewController degreesToRads:fabs([lon2 floatValue]-[lon1 floatValue])];
-		float rlat1 = [RadarLoveViewController degreesToRads:[lat1 floatValue]];
-		float rlat2 = [RadarLoveViewController degreesToRads:[lat2 floatValue]];
-		NSLog(@"%g %g %g %g", dLat, dLon, rlat1, rlat2);
+		double dLat = [RadarLoveViewController degreesToRads:([lat2 doubleValue]-[lat1 doubleValue])];
+		double dLon = [RadarLoveViewController degreesToRads:([lon2 doubleValue]-[lon1 doubleValue])];
+		double rlat1 = [RadarLoveViewController degreesToRads:[lat1 doubleValue]];
+		double rlat2 = [RadarLoveViewController degreesToRads:[lat2 doubleValue]];
 		
-		float dPhi = logf(tanf(rlat2/2+M_PI/4)/tanf(rlat1/2+M_PI/4));
-		float q = (!isnan(dPhi)) ? dLat/dPhi : cosf(rlat1);
+		double dPhi = log(tan(rlat2/2+M_PI/4)/tan(rlat1/2+M_PI/4));
+		NSLog(@"%g", dPhi);
+		double q = (!isnan(dLat/dPhi)) ? dLat/dPhi : cos(rlat1);  // E-W line gives dPhi=0
 		
 		// if dLon over 180° take shorter rhumb across 180° meridian:
-		if (fabs(dLon) > M_PI) {
+		if (abs(dLon) > M_PI) {
 			dLon = dLon>0 ? -(2*M_PI-dLon) : (2*M_PI+dLon);
 		}
-		distance = sqrtf(dLat*dLat + q*q*dLon*dLon) * 6731;
-		bearing = atan2f(dLon, dPhi)*180/M_PI;
+		distance = sqrt(dLat*dLat + q*q*dLon*dLon) * 6371;
+		bearing = (atan2(dLon, dPhi)*180/M_PI);
 		NSLog(@"%@ %@ | %@ %@ \n %g km | %g dg", lat1, lon1, lat2, lon2, distance, bearing);
 	}
 }
@@ -124,8 +124,8 @@
 		}
 		waitingForTweets = NO;
 	} else if (!waitingForTweets) {
-		self.lat1 = [NSNumber numberWithDouble:newLocation.coordinate.latitude]; 
-		self.lon1 = [NSNumber numberWithDouble:newLocation.coordinate.longitude];
+		self.lat1 = [NSNumber numberWithDouble:manager.location.coordinate.latitude]; 
+		self.lon1 = [NSNumber numberWithDouble:manager.location.coordinate.longitude];
 		[self bearingAndDistance];
 	}
 }
@@ -154,11 +154,17 @@
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateHeading:(CLHeading *)newHeading
 {
-	double currentBearing = newHeading.trueHeading;
-	double difference = abs(currentBearing-bearing);
-	if (difference > 180) difference = 180 - (difference - 180);
-	topView.alpha = 1 - (difference - 5)/180;
-	NSLog(@"%g %g", currentBearing, difference);
+	if (distance > .01) {
+		topView.backgroundColor = [UIColor redColor];
+		double currentBearing = newHeading.trueHeading;
+		double difference = abs(currentBearing-bearing);
+		if (difference > 180) difference = 180 - (difference - 180);
+		topView.alpha = 1 - (difference - 5)/180;
+		NSLog(@"%g %g", currentBearing, difference);
+	} else {
+		topView.backgroundColor = [UIColor greenColor];
+		topView.alpha = 1;
+	}
 }
 
 - (BOOL)locationManagerShouldDisplayHeadingCalibration:(CLLocationManager *)manager
