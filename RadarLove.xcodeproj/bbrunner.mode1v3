@@ -327,7 +327,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>2CCB9DC712E6D4F100EF68B5</string>
+										<string>2CCB9DE012E76A7700EF68B5</string>
 										<key>history</key>
 										<array>
 											<string>2CCAB71812E3BCB400F1008B</string>
@@ -534,7 +534,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>2CCB9DC812E6D4F100EF68B5</string>
+		<string>2CCB9DE112E76A7700EF68B5</string>
 		<string>2CCB9DA512E6CC3B00EF68B5</string>
 		<string>2CCB9DA712E6CC3B00EF68B5</string>
 		<string>1C78EAAD065D492600B07095</string>
@@ -924,7 +924,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>Identifier</key>

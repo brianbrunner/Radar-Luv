@@ -37,7 +37,6 @@
 		double rlat2 = [RadarLoveViewController degreesToRads:[lat2 doubleValue]];
 		
 		double dPhi = log(tan(rlat2/2+M_PI/4)/tan(rlat1/2+M_PI/4));
-		NSLog(@"%g", dPhi);
 		double q = (!isnan(dLat/dPhi)) ? dLat/dPhi : cos(rlat1);  // E-W line gives dPhi=0
 		
 		// if dLon over 180° take shorter rhumb across 180° meridian:
@@ -47,7 +46,6 @@
 		distance = sqrt(dLat*dLat + q*q*dLon*dLon) * 6371;
 		double brng = (atan2(dLon, dPhi)*180/M_PI);
 		bearing = (brng < 0) ? brng + 360 : brng;
-		NSLog(@"%@ %@ | %@ %@ \n %g km | %g dg", lat1, lon1, lat2, lon2, distance, bearing);
 	}
 }
 
@@ -155,13 +153,18 @@
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateHeading:(CLHeading *)newHeading
 {
+	NSLog(@"%g", distance);
 	if (distance > .01) {
 		topView.backgroundColor = [UIColor redColor];
 		double currentBearing = newHeading.trueHeading;
 		double difference = abs(currentBearing-bearing);
 		if (difference > 180) difference = 180 - (difference - 180);
-		topView.alpha = 1 - (difference - 5)/180;
-		NSLog(@"%g %g", currentBearing, difference);
+		topView.alpha = .9 - .9*(difference)/180;
+		if (difference < 3) {
+			topView.alpha = 1;
+		} else {
+			topView.alpha = .9 - .9*(difference)/180;
+		}
 	} else {
 		topView.backgroundColor = [UIColor greenColor];
 		topView.alpha = 1;
