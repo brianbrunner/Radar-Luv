@@ -29,9 +29,9 @@
 	};
 	28D7ACF70DDB3853001CB0EB /* RadarLoveViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1011, 2769}}";
-			sepNavSelRange = "{744, 0}";
-			sepNavVisRange = "{306, 1139}";
+			sepNavIntBoundsRect = "{{0, 0}, {901, 2756}}";
+			sepNavSelRange = "{1312, 0}";
+			sepNavVisRange = "{1114, 436}";
 			sepNavWindowFrame = "{{15, 215}, {750, 558}}";
 		};
 	};
@@ -83,6 +83,8 @@
 			2CCAB93612E6C06D00F1008B = 2CCAB93612E6C06D00F1008B /* PBXTextBookmark */;
 			2CCAB95B12E6CB6E00F1008B = 2CCAB95B12E6CB6E00F1008B /* PBXTextBookmark */;
 			2CCB9D9A12E6CC3B00EF68B5 /* PBXTextBookmark */ = 2CCB9D9A12E6CC3B00EF68B5 /* PBXTextBookmark */;
+			2CCB9DBB12E6D3AD00EF68B5 /* XCBuildMessageTextBookmark */ = 2CCB9DBB12E6D3AD00EF68B5 /* XCBuildMessageTextBookmark */;
+			2CCB9DBC12E6D3AD00EF68B5 /* PBXTextBookmark */ = 2CCB9DBC12E6D3AD00EF68B5 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 2CCAB18E12DE22CF00F1008B /* Source Control */;
 		userBuildSettings = {
@@ -252,7 +254,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* RadarLoveViewController.m */;
 		name = "RadarLoveViewController.m: 124";
 		rLen = 0;
-		rLoc = 4265;
+		rLoc = 4313;
 		rType = 0;
 		vrLen = 904;
 		vrLoc = 4253;
@@ -262,9 +264,28 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* RadarLoveViewController.m */;
 		name = "RadarLoveViewController.m: 124";
 		rLen = 0;
-		rLoc = 4265;
+		rLoc = 4313;
 		rType = 0;
 		vrLen = 945;
 		vrLoc = 4210;
+	};
+	2CCB9DBB12E6D3AD00EF68B5 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Invalid operands to binary % (have 'double' and 'int')";
+		fRef = 28D7ACF70DDB3853001CB0EB /* RadarLoveViewController.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 48;
+		rType = 1;
+	};
+	2CCB9DBC12E6D3AD00EF68B5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* RadarLoveViewController.m */;
+		name = "RadarLoveViewController.m: 48";
+		rLen = 0;
+		rLoc = 1312;
+		rType = 0;
+		vrLen = 436;
+		vrLoc = 1114;
 	};
 }

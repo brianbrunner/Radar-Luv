@@ -45,7 +45,8 @@
 			dLon = dLon>0 ? -(2*M_PI-dLon) : (2*M_PI+dLon);
 		}
 		distance = sqrt(dLat*dLat + q*q*dLon*dLon) * 6371;
-		bearing = (atan2(dLon, dPhi)*180/M_PI);
+		double brng = (atan2(dLon, dPhi)*180/M_PI);
+		bearing = (brng < 0) ? brng + 360 : brng;
 		NSLog(@"%@ %@ | %@ %@ \n %g km | %g dg", lat1, lon1, lat2, lon2, distance, bearing);
 	}
 }
@@ -124,8 +125,8 @@
 		}
 		waitingForTweets = NO;
 	} else if (!waitingForTweets) {
-		self.lat1 = [NSNumber numberWithDouble:manager.location.coordinate.latitude]; 
-		self.lon1 = [NSNumber numberWithDouble:manager.location.coordinate.longitude];
+		self.lat1 = [NSNumber numberWithDouble:37.4243880694060]; //manager.location.coordinate.latitude]; 
+		self.lon1 = [NSNumber numberWithDouble:-122.1694060];//manager.location.coordinate.longitude];
 		[self bearingAndDistance];
 	}
 }
