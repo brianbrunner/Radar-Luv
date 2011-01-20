@@ -22,8 +22,6 @@
 		2CCAB4DD12E3A68D00F1008B /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCAB4D812E3A68D00F1008B /* SBJsonWriter.m */; };
 		2CCAB70812E3BAAC00F1008B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CCAB70712E3BAAC00F1008B /* AudioToolbox.framework */; };
 		2CCAB74E12E3C5CE00F1008B /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2CCAB74D12E3C5CE00F1008B /* Settings.bundle */; };
-		2CCAB90212E68BD200F1008B /* RadarLoveConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCAB90012E68BD200F1008B /* RadarLoveConfig.m */; };
-		2CCAB90312E68BD200F1008B /* RadarLoveConfig.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CCAB90112E68BD200F1008B /* RadarLoveConfig.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,9 +49,6 @@
 		2CCAB4D812E3A68D00F1008B /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		2CCAB70712E3BAAC00F1008B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		2CCAB74D12E3C5CE00F1008B /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = JSON/Settings.bundle; sourceTree = "<group>"; };
-		2CCAB8FF12E68BD200F1008B /* RadarLoveConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadarLoveConfig.h; sourceTree = "<group>"; };
-		2CCAB90012E68BD200F1008B /* RadarLoveConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadarLoveConfig.m; sourceTree = "<group>"; };
-		2CCAB90112E68BD200F1008B /* RadarLoveConfig.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = RadarLoveConfig.xib; path = Classes/RadarLoveConfig.xib; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* RadarLove_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadarLove_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* RadarLove-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "RadarLove-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,8 +71,6 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				2CCAB8FF12E68BD200F1008B /* RadarLoveConfig.h */,
-				2CCAB90012E68BD200F1008B /* RadarLoveConfig.m */,
 				1D3623240D0F684500981E51 /* RadarLoveAppDelegate.h */,
 				1D3623250D0F684500981E51 /* RadarLoveAppDelegate.m */,
 				28D7ACF60DDB3853001CB0EB /* RadarLoveViewController.h */,
@@ -121,7 +114,6 @@
 			children = (
 				2CCAB74D12E3C5CE00F1008B /* Settings.bundle */,
 				2899E5210DE3E06400AC0155 /* RadarLoveViewController.xib */,
-				2CCAB90112E68BD200F1008B /* RadarLoveConfig.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* RadarLove-Info.plist */,
 			);
@@ -209,7 +201,6 @@
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				2899E5220DE3E06400AC0155 /* RadarLoveViewController.xib in Resources */,
 				2CCAB74E12E3C5CE00F1008B /* Settings.bundle in Resources */,
-				2CCAB90312E68BD200F1008B /* RadarLoveConfig.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,7 +219,6 @@
 				2CCAB4DB12E3A68D00F1008B /* SBJsonBase.m in Sources */,
 				2CCAB4DC12E3A68D00F1008B /* SBJsonParser.m in Sources */,
 				2CCAB4DD12E3A68D00F1008B /* SBJsonWriter.m in Sources */,
-				2CCAB90212E68BD200F1008B /* RadarLoveConfig.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

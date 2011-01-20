@@ -21,8 +21,18 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
 	
-	NSLog(@"%@", [[NSUserDefaults standardUserDefaults] stringForKey:@"twitterUserName"]);
-	viewController.username = @"brianner";
+	//Get the bundle path
+	NSString *bPath = [[NSBundle mainBundle] bundlePath];
+	NSString *settingsPath = [bPath stringByAppendingPathComponent:@"Settings.bundle"];
+	NSString *plistFile = [settingsPath stringByAppendingPathComponent:@"Root.plist"];
+	
+	//Get the Preferences Array from the dictionary
+	NSDictionary *settingsDictionary = [NSDictionary dictionaryWithContentsOfFile:plistFile];
+	NSArray *preferencesArray = [settingsDictionary objectForKey:@"PreferenceSpecifiers"];
+	NSDictionary *userDict = [preferencesArray objectAtIndex:0];
+
+	viewController.username = [userDict objectForKey:@"DefaultValue"];
+	NSLog(@"%@", viewController.username);
     viewController.view.backgroundColor = [UIColor blueColor];
 	self.locationManager = [[CLLocationManager alloc] init];
 	viewController.locationManager = locationManager;

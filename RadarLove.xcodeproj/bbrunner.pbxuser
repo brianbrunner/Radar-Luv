@@ -2,16 +2,16 @@
 {
 	1D3623240D0F684500981E51 /* RadarLoveAppDelegate.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1011, 429}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1011, 419}}";
 			sepNavSelRange = "{681, 0}";
 			sepNavVisRange = "{0, 693}";
 		};
 	};
 	1D3623250D0F684500981E51 /* RadarLoveAppDelegate.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1011, 1027}}";
-			sepNavSelRange = "{1519, 2}";
-			sepNavVisRange = "{400, 1120}";
+			sepNavIntBoundsRect = "{{0, 0}, {1011, 1092}}";
+			sepNavSelRange = "{1122, 0}";
+			sepNavVisRange = "{365, 1416}";
 		};
 	};
 	1D6058900D05DD3D006BFB54 /* RadarLove */ = {
@@ -29,16 +29,16 @@
 	};
 	28D7ACF70DDB3853001CB0EB /* RadarLoveViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1671, 2548}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1671, 2613}}";
 			sepNavSelRange = "{5683, 0}";
-			sepNavVisRange = "{4786, 898}";
+			sepNavVisRange = "{2641, 1813}";
 			sepNavWindowFrame = "{{15, 215}, {750, 558}}";
 		};
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Debug;
 		activeExecutable = 2CCAB18412DE22AF00F1008B /* RadarLove */;
-		activeSDKPreference = iphoneos4.2;
+		activeSDKPreference = iphonesimulator4.2;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* RadarLove */;
 		addToTargets = (
 			1D6058900D05DD3D006BFB54 /* RadarLove */,
@@ -70,8 +70,8 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 317115426;
-			PBXWorkspaceStateSaveDate = 317115426;
+			PBXPerProjectTemplateStateSaveDate = 317200913;
+			PBXWorkspaceStateSaveDate = 317200913;
 		};
 		perUserProjectItems = {
 			2CCAB71812E3BCB400F1008B = 2CCAB71812E3BCB400F1008B /* PlistBookmark */;
@@ -80,18 +80,15 @@
 			2CCAB90812E68BFB00F1008B = 2CCAB90812E68BFB00F1008B /* PBXTextBookmark */;
 			2CCAB90A12E6B94D00F1008B = 2CCAB90A12E6B94D00F1008B /* PBXTextBookmark */;
 			2CCAB93512E6C06D00F1008B = 2CCAB93512E6C06D00F1008B /* PBXTextBookmark */;
-			2CCAB93612E6C06D00F1008B = 2CCAB93612E6C06D00F1008B /* PBXTextBookmark */;
-			2CCAB95B12E6CB6E00F1008B = 2CCAB95B12E6CB6E00F1008B /* PBXTextBookmark */;
-			2CCB9D9A12E6CC3B00EF68B5 /* PBXTextBookmark */ = 2CCB9D9A12E6CC3B00EF68B5 /* PBXTextBookmark */;
-			2CCB9DBB12E6D3AD00EF68B5 /* XCBuildMessageTextBookmark */ = 2CCB9DBB12E6D3AD00EF68B5 /* XCBuildMessageTextBookmark */;
-			2CCB9DBC12E6D3AD00EF68B5 /* PBXTextBookmark */ = 2CCB9DBC12E6D3AD00EF68B5 /* PBXTextBookmark */;
-			2CCB9DC612E6D4F100EF68B5 /* XCBuildMessageTextBookmark */ = 2CCB9DC612E6D4F100EF68B5 /* XCBuildMessageTextBookmark */;
-			2CCB9DC712E6D4F100EF68B5 /* PBXTextBookmark */ = 2CCB9DC712E6D4F100EF68B5 /* PBXTextBookmark */;
-			2CCB9DD012E6D70C00EF68B5 /* PBXTextBookmark */ = 2CCB9DD012E6D70C00EF68B5 /* PBXTextBookmark */;
-			2CCB9DD112E6D71100EF68B5 /* PBXTextBookmark */ = 2CCB9DD112E6D71100EF68B5 /* PBXTextBookmark */;
-			2CCB9DD412E76A0B00EF68B5 /* PBXTextBookmark */ = 2CCB9DD412E76A0B00EF68B5 /* PBXTextBookmark */;
-			2CCB9DDF12E76A7500EF68B5 /* PBXTextBookmark */ = 2CCB9DDF12E76A7500EF68B5 /* PBXTextBookmark */;
-			2CCB9DE012E76A7700EF68B5 /* PBXTextBookmark */ = 2CCB9DE012E76A7700EF68B5 /* PBXTextBookmark */;
+			2CCB9DC612E6D4F100EF68B5 = 2CCB9DC612E6D4F100EF68B5 /* PBXTextBookmark */;
+			2CCB9DE212E773F600EF68B5 = 2CCB9DE212E773F600EF68B5 /* PBXTextBookmark */;
+			2CCB9DE912E81A1C00EF68B5 /* PBXTextBookmark */ = 2CCB9DE912E81A1C00EF68B5 /* PBXTextBookmark */;
+			2CCB9DEF12E81AAF00EF68B5 /* PBXTextBookmark */ = 2CCB9DEF12E81AAF00EF68B5 /* PBXTextBookmark */;
+			2CCB9DF012E81AAF00EF68B5 /* PlistBookmark */ = 2CCB9DF012E81AAF00EF68B5 /* PlistBookmark */;
+			2CCB9DF112E81AAF00EF68B5 /* PlistBookmark */ = 2CCB9DF112E81AAF00EF68B5 /* PlistBookmark */;
+			2CCB9E0912E8BC6C00EF68B5 /* PlistBookmark */ = 2CCB9E0912E8BC6C00EF68B5 /* PlistBookmark */;
+			2CCB9E0A12E8BC6C00EF68B5 /* PBXTextBookmark */ = 2CCB9E0A12E8BC6C00EF68B5 /* PBXTextBookmark */;
+			2CCB9E0B12E8BC6C00EF68B5 /* PBXTextBookmark */ = 2CCB9E0B12E8BC6C00EF68B5 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 2CCAB18E12DE22CF00F1008B /* Source Control */;
 		userBuildSettings = {
@@ -200,8 +197,14 @@
 		rLoc = 9223372036854775808;
 	};
 	2CCAB8FF12E68BD200F1008B /* RadarLoveConfig.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = RadarLoveConfig.h;
+		path = /Users/bbrunner/Documents/RadarLove/Classes/RadarLoveConfig.h;
+		sourceTree = "<absolute>";
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1011, 429}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1011, 419}}";
 			sepNavSelRange = "{211, 0}";
 			sepNavVisRange = "{0, 220}";
 		};
@@ -211,7 +214,7 @@
 		fRef = 1D3623250D0F684500981E51 /* RadarLoveAppDelegate.m */;
 		name = "RadarLoveAppDelegate.m: 52";
 		rLen = 2;
-		rLoc = 1519;
+		rLoc = 2039;
 		rType = 0;
 		vrLen = 1120;
 		vrLoc = 400;
@@ -246,122 +249,98 @@
 		vrLen = 693;
 		vrLoc = 450;
 	};
-	2CCAB93612E6C06D00F1008B /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF70DDB3853001CB0EB /* RadarLoveViewController.m */;
-		name = "RadarLoveViewController.m: 26";
-		rLen = 0;
-		rLoc = 487;
-		rType = 0;
-		vrLen = 1082;
-		vrLoc = 453;
-	};
-	2CCAB95B12E6CB6E00F1008B /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF70DDB3853001CB0EB /* RadarLoveViewController.m */;
-		name = "RadarLoveViewController.m: 124";
-		rLen = 0;
-		rLoc = 4204;
-		rType = 0;
-		vrLen = 904;
-		vrLoc = 4253;
-	};
-	2CCB9D9A12E6CC3B00EF68B5 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF70DDB3853001CB0EB /* RadarLoveViewController.m */;
-		name = "RadarLoveViewController.m: 124";
-		rLen = 0;
-		rLoc = 4204;
-		rType = 0;
-		vrLen = 945;
-		vrLoc = 4210;
-	};
-	2CCB9DBB12E6D3AD00EF68B5 /* XCBuildMessageTextBookmark */ = {
+	2CCB9DC612E6D4F100EF68B5 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		comments = "Invalid operands to binary % (have 'double' and 'int')";
 		fRef = 28D7ACF70DDB3853001CB0EB /* RadarLoveViewController.m */;
-		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
 		rLoc = 47;
 		rType = 1;
 	};
-	2CCB9DBC12E6D3AD00EF68B5 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF70DDB3853001CB0EB /* RadarLoveViewController.m */;
-		name = "RadarLoveViewController.m: 48";
-		rLen = 0;
-		rLoc = 1290;
-		rType = 0;
-		vrLen = 436;
-		vrLoc = 1114;
-	};
-	2CCB9DC612E6D4F100EF68B5 /* XCBuildMessageTextBookmark */ = {
-		isa = PBXTextBookmark;
-		comments = "Invalid operands to binary % (have 'double' and 'int')";
-		fRef = 28D7ACF70DDB3853001CB0EB /* RadarLoveViewController.m */;
-		fallbackIsa = XCBuildMessageTextBookmark;
-		rLen = 1;
-		rLoc = 47;
-		rType = 1;
-	};
-	2CCB9DC712E6D4F100EF68B5 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF70DDB3853001CB0EB /* RadarLoveViewController.m */;
-		name = "RadarLoveViewController.m: 129";
-		rLen = 0;
-		rLoc = 4385;
-		rType = 0;
-		vrLen = 1433;
-		vrLoc = 3280;
-	};
-	2CCB9DD012E6D70C00EF68B5 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF70DDB3853001CB0EB /* RadarLoveViewController.m */;
-		name = "RadarLoveViewController.m: 47";
-		rLen = 0;
-		rLoc = 1290;
-		rType = 0;
-		vrLen = 403;
-		vrLoc = 1092;
-	};
-	2CCB9DD112E6D71100EF68B5 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF70DDB3853001CB0EB /* RadarLoveViewController.m */;
-		name = "RadarLoveViewController.m: 156";
-		rLen = 0;
-		rLoc = 5112;
-		rType = 0;
-		vrLen = 957;
-		vrLoc = 4831;
-	};
-	2CCB9DD412E76A0B00EF68B5 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF70DDB3853001CB0EB /* RadarLoveViewController.m */;
-		name = "RadarLoveViewController.m: 164";
-		rLen = 0;
-		rLoc = 5436;
-		rType = 0;
-		vrLen = 973;
-		vrLoc = 4711;
-	};
-	2CCB9DDF12E76A7500EF68B5 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF70DDB3853001CB0EB /* RadarLoveViewController.m */;
-		name = "RadarLoveViewController.m: 47";
-		rLen = 0;
-		rLoc = 1290;
-		rType = 0;
-		vrLen = 329;
-		vrLoc = 1092;
-	};
-	2CCB9DE012E76A7700EF68B5 /* PBXTextBookmark */ = {
+	2CCB9DE212E773F600EF68B5 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 28D7ACF70DDB3853001CB0EB /* RadarLoveViewController.m */;
 		name = "RadarLoveViewController.m: 176";
 		rLen = 0;
 		rLoc = 5683;
 		rType = 0;
-		vrLen = 898;
-		vrLoc = 4786;
+		vrLen = 1813;
+		vrLoc = 2641;
+	};
+	2CCB9DE912E81A1C00EF68B5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* RadarLoveViewController.m */;
+		name = "RadarLoveViewController.m: 176";
+		rLen = 0;
+		rLoc = 5683;
+		rType = 0;
+		vrLen = 1813;
+		vrLoc = 2641;
+	};
+	2CCB9DEF12E81AAF00EF68B5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* RadarLoveViewController.m */;
+		name = "RadarLoveViewController.m: 176";
+		rLen = 0;
+		rLoc = 5683;
+		rType = 0;
+		vrLen = 1813;
+		vrLoc = 2641;
+	};
+	2CCB9DF012E81AAF00EF68B5 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 2CCAB75912E3C6C800F1008B /* Root.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			PreferenceSpecifiers,
+			0,
+			Key,
+		);
+		name = /Users/bbrunner/Documents/RadarLove/JSON/Settings.bundle/Root.plist;
+		rLen = 0;
+		rLoc = 0;
+	};
+	2CCB9DF112E81AAF00EF68B5 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 2CCAB75912E3C6C800F1008B /* Root.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = /Users/bbrunner/Documents/RadarLove/JSON/Settings.bundle/Root.plist;
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	2CCB9E0912E8BC6C00EF68B5 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 2CCAB75912E3C6C800F1008B /* Root.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = /Users/bbrunner/Documents/RadarLove/JSON/Settings.bundle/Root.plist;
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	2CCB9E0A12E8BC6C00EF68B5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* RadarLoveAppDelegate.h */;
+		name = "RadarLoveAppDelegate.h: 24";
+		rLen = 0;
+		rLoc = 681;
+		rType = 0;
+		vrLen = 693;
+		vrLoc = 0;
+	};
+	2CCB9E0B12E8BC6C00EF68B5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* RadarLoveAppDelegate.m */;
+		name = "RadarLoveAppDelegate.m: 34";
+		rLen = 0;
+		rLoc = 1122;
+		rType = 0;
+		vrLen = 1416;
+		vrLoc = 365;
 	};
 }
